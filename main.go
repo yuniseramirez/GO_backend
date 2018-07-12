@@ -9,9 +9,9 @@ import (
 
 )
 
-type Article struct {
+type Article struct {  // yunise- maybe add an author and id number
                 Image string
-                Tittle string
+                Tittle string // yunise- title*
                 Paragraph string
 }
 
@@ -22,7 +22,7 @@ var article = []Article{
                 Article{Image: "image.png", Tittle: "people" , Paragraph: "hello everyone"}}
 
 func GetData(w http.ResponseWriter, r *http.Request) {
-                json.NewEncoder(w).Encode(article)
+                json.NewEncoder(w).Encode(article) //yunise - add func PostData 
 }
 
 func main() {
